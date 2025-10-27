@@ -55,42 +55,39 @@ const eligibilityData = [
         title: "Age",
         value: "21-24 Years",
         icon: <i className="fa-solid fa-calendar" />, // Placeholder Icon
-        note: <img
-            src={twentyOne}
-            alt="twentyOne"
-            style={{ width: 80, height: 80 }}
-        />,
+            note: (
+                <Box
+                    component="img"
+                    src={twentyOne}
+                    alt="twentyOne"
+                    sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }}
+                />
+            ),
 
     },
     {
         title: "Job Status",
         value: "Not Employed Full Time",
         icon: <i className="fa-solid fa-briefcase" />, // Placeholder Icon
-        note: <img
-            src={job}
-            alt="job"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={job} alt="job" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
     {
         title: "Education",
         value: "Not Enrolled Full Time",
         icon: <i className="fa-solid fa-graduation-cap" />, // Placeholder Icon
-        note: <img
-            src={education}
-            alt="education"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={education} alt="education" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
     {
         title: "Family",
         value: "No one is earning more than ₹8 Lakhs PA",
         icon: <i className="fa-solid fa-user-group" />, // Placeholder Icon
-        note: <img
-            src={family}
-            alt="family"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={family} alt="family" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
 ];
 
@@ -99,41 +96,33 @@ const benefitsData = [
         title: "Real-life Experience",
         value: "12 months real-life experience in India's top companies",
         icon: <i className="fa-solid fa-briefcase" />, // Placeholder Icon
-        note: <img
-            src={job}
-            alt="job"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={job} alt="job" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
     {
         title: "Financial Assistance",
         value: "Monthly assistance of ₹4500 by Government of India and ₹500 by industry",
         icon: <i className="fa-solid fa-wallet" />, // Placeholder Icon
-        note: <img
-            src={wallet}
-            alt="wallet"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={wallet} alt="wallet" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
     {
         title: "One-time Grant",
         value: "One-time Grant of ₹6000 for incidentals",
         icon: <i className="fa-solid fa-coins" />, // Placeholder Icon
-        note: <img
-            src={coin}
-            alt="coin"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={coin} alt="coin" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
     {
         title: "Sector Selectivity",
         value: "Select from Various Sectors and from top Companies of India",
         icon: <i className="fa-solid fa-cubes" />, // Placeholder Icon
-        note: <img
-            src={check}
-            alt="check"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={check} alt="check" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
 ];
 
@@ -149,7 +138,7 @@ const EligibilityCardStyles = {
         alignItems: "center",
         textAlign: "center",
         bgcolor: isDarkMode ? DARK_PAPER_BG : LIGHT_PAPER_BG, // Theme-dependent background
-        width: "12vw",
+    width: { xs: '100%', sm: '12vw' },
 
         "&:hover": {
             boxShadow: "0 8px 16px rgba(0, 0, 0, 0.1)",
@@ -159,9 +148,9 @@ const EligibilityCardStyles = {
     }),
     // Styling for Eligibility icons (Orange theme)
     iconBox: (isBenefit = false) => ({
-        width: isBenefit ? 50 : 80,
-        height: isBenefit ? 50 : 80,
-        borderRadius: '50%',
+        width: { xs: '100%', sm: isBenefit ? 50 : 80 },
+        height: { xs: 'auto', sm: isBenefit ? 50 : 80 },
+        borderRadius: { xs: '12px', sm: '50%' },
         bgcolor: "hsla(216, 90%, 90%, 1.00)", // Very light orange/yellow background
         color: CORE_NAVY_COLOR,
         display: 'flex',
@@ -213,11 +202,9 @@ const successStories = [
         company: "Google India",
         quote:
             "\"The PM Internship gave me hands-on experience that no classroom could provide. I learned real world skills and got placed at Google right after graduation.\"",
-        note:<img
-            src={success}
-            alt="success"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
     {
         name: "Rahul Verma",
@@ -225,11 +212,9 @@ const successStories = [
         company: "Flipkart",
         quote:
             "\"Working with industry experts during my internship opened up career paths I never imagined. The mentorship and exposure were invaluable.\"",
-        note:<img
-            src={success}
-            alt="success"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
     {
         name: "Anita Patel",
@@ -237,11 +222,9 @@ const successStories = [
         company: "Microsoft India",
         quote:
             "\"The structured program helped me transition from theoretical knowledge to practical application. I'm now working on cutting edge AI projects at Microsoft.\"",
-        note:<img
-            src={success}
-            alt="success"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
     {
         name: "Vikram Singh",
@@ -249,11 +232,9 @@ const successStories = [
         company: "Amazon",
         quote:
             "\"The internship honed my strategic thinking and campaign management skills. Now, I'm driving successful marketing initiatives at Amazon.\"",
-        note:<img
-            src={success}
-            alt="success"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
     {
         name: "Deepa Devi",
@@ -261,11 +242,9 @@ const successStories = [
         company: "Adobe",
         quote:
             "\"Learning from senior designers and applying principles to real products was incredible. My internship directly led to my role at Adobe.\"",
-        note:<img
-            src={success}
-            alt="success"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
     {
         name: "Arjun Reddy",
@@ -273,11 +252,9 @@ const successStories = [
         company: "Ola Cabs",
         quote:
             "\"The fast-paced environment of the internship taught me invaluable lessons in logistics and operations. I'm thriving at Ola Cabs thanks to that foundation.\"",
-        note:<img
-            src={success}
-            alt="success"
-            style={{ width: 80, height: 80 }}
-        />,
+        note: (
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+        ),
     },
 ];
 
