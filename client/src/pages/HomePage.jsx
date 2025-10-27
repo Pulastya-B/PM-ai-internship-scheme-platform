@@ -60,7 +60,7 @@ const eligibilityData = [
                     component="img"
                     src={twentyOne}
                     alt="twentyOne"
-                    sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }}
+                    sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }}
                 />
             ),
 
@@ -70,7 +70,7 @@ const eligibilityData = [
         value: "Not Employed Full Time",
         icon: <i className="fa-solid fa-briefcase" />, // Placeholder Icon
         note: (
-            <Box component="img" src={job} alt="job" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={job} alt="job" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
     {
@@ -78,7 +78,7 @@ const eligibilityData = [
         value: "Not Enrolled Full Time",
         icon: <i className="fa-solid fa-graduation-cap" />, // Placeholder Icon
         note: (
-            <Box component="img" src={education} alt="education" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={education} alt="education" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
     {
@@ -86,7 +86,7 @@ const eligibilityData = [
         value: "No one is earning more than ₹8 Lakhs PA",
         icon: <i className="fa-solid fa-user-group" />, // Placeholder Icon
         note: (
-            <Box component="img" src={family} alt="family" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={family} alt="family" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
 ];
@@ -97,7 +97,7 @@ const benefitsData = [
         value: "12 months real-life experience in India's top companies",
         icon: <i className="fa-solid fa-briefcase" />, // Placeholder Icon
         note: (
-            <Box component="img" src={job} alt="job" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={job} alt="job" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
     {
@@ -105,7 +105,7 @@ const benefitsData = [
         value: "Monthly assistance of ₹4500 by Government of India and ₹500 by industry",
         icon: <i className="fa-solid fa-wallet" />, // Placeholder Icon
         note: (
-            <Box component="img" src={wallet} alt="wallet" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={wallet} alt="wallet" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
     {
@@ -113,7 +113,7 @@ const benefitsData = [
         value: "One-time Grant of ₹6000 for incidentals",
         icon: <i className="fa-solid fa-coins" />, // Placeholder Icon
         note: (
-            <Box component="img" src={coin} alt="coin" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={coin} alt="coin" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
     {
@@ -121,7 +121,7 @@ const benefitsData = [
         value: "Select from Various Sectors and from top Companies of India",
         icon: <i className="fa-solid fa-cubes" />, // Placeholder Icon
         note: (
-            <Box component="img" src={check} alt="check" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={check} alt="check" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
 ];
@@ -139,6 +139,7 @@ const EligibilityCardStyles = {
         textAlign: "center",
         bgcolor: isDarkMode ? DARK_PAPER_BG : LIGHT_PAPER_BG, // Theme-dependent background
     width: { xs: '100%', sm: '12vw' },
+    maxWidth: { xs: 520, sm: 'none' },
 
         "&:hover": {
             boxShadow: "0 8px 16px rgba(0, 0, 0, 0.1)",
@@ -148,9 +149,10 @@ const EligibilityCardStyles = {
     }),
     // Styling for Eligibility icons (Orange theme)
     iconBox: (isBenefit = false) => ({
-        width: { xs: '100%', sm: isBenefit ? 50 : 80 },
+        width: { xs: 'auto', sm: isBenefit ? 50 : 80 },
         height: { xs: 'auto', sm: isBenefit ? 50 : 80 },
-        borderRadius: { xs: '12px', sm: '50%' },
+        borderRadius: '50%',
+        p: { xs: 2, sm: 0 },
         bgcolor: "hsla(216, 90%, 90%, 1.00)", // Very light orange/yellow background
         color: CORE_NAVY_COLOR,
         display: 'flex',
@@ -162,9 +164,10 @@ const EligibilityCardStyles = {
     }),
     // Styling for Benefits icons (Blue theme)
     benefitIconBox: {
-        width: 70,
-        height: 70,
+        width: { xs: 'auto', sm: 70 },
+        height: { xs: 'auto', sm: 70 },
         borderRadius: '50%',
+        p: { xs: 2, sm: 0 },
         bgcolor: 'hsla(216, 90%, 39%, 0.1)', // Light Navy background
         color: CORE_NAVY_COLOR,
         display: 'flex',
@@ -203,7 +206,7 @@ const successStories = [
         quote:
             "\"The PM Internship gave me hands-on experience that no classroom could provide. I learned real world skills and got placed at Google right after graduation.\"",
         note: (
-            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
     {
@@ -213,7 +216,7 @@ const successStories = [
         quote:
             "\"Working with industry experts during my internship opened up career paths I never imagined. The mentorship and exposure were invaluable.\"",
         note: (
-            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
     {
@@ -223,7 +226,7 @@ const successStories = [
         quote:
             "\"The structured program helped me transition from theoretical knowledge to practical application. I'm now working on cutting edge AI projects at Microsoft.\"",
         note: (
-            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
     {
@@ -233,7 +236,7 @@ const successStories = [
         quote:
             "\"The internship honed my strategic thinking and campaign management skills. Now, I'm driving successful marketing initiatives at Amazon.\"",
         note: (
-            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
     {
@@ -243,7 +246,7 @@ const successStories = [
         quote:
             "\"Learning from senior designers and applying principles to real products was incredible. My internship directly led to my role at Adobe.\"",
         note: (
-            <Box component="img" src={success} alt="success" sx={{ width: { xs: '100%', sm: 80 }, height: 'auto', objectFit: 'contain' }} />
+            <Box component="img" src={success} alt="success" sx={{ width: { xs: '60%', sm: 80 }, height: 'auto', objectFit: 'contain', mx: 'auto' }} />
         ),
     },
     {
@@ -496,7 +499,7 @@ export default function HomePage() {
 
     return (
         // Use mainBg for the overall page background
-        <Box sx={{ minHeight: "100vh", bgcolor: mainBg, color: appBarColor }}>
+        <Box sx={{ minHeight: "100vh", bgcolor: mainBg, color: appBarColor, pb: 'env(safe-area-inset-bottom)' }}>
 
             {/* --- START FLOATING DARK MODE TOGGLE --- */}
             {/* Placed outside the AppBar, fixed position, 10px below the calculated AppBar height */}
